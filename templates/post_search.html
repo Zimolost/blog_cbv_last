@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+
+{% block content %}
+{% if query %}
+    <h1>Posts containing "{{ query }}"</h1>
+    <h3>
+        {% with results.count as total_results %}
+            Found {{ total_results }} result{{ total_results|pluralize }}
+        {% endwith %}
+    </h3>
+    {% for post in results %}
+        <div class="post">
+            <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+            {% if post.thumbnail %}
+                <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}" style="max-width: 150px; height: auto;">
+            {% endif %}
+            <p>{{ post.description|truncatewords:30 }}</p>
+        </div>
+    {% empty %}
+        <p>There are no results for your query.</p>
+    {% endfor %}
+{% else %}
+    <h1>Search for posts</h1>
+    {% include 'search_form.html' %}
+{% endif %}
+{% endblock %}

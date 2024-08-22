@@ -1,0 +1,7 @@
+<p>Поисковая форма</p>
+<form method="get" action="{% url 'post_search' %}" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="query" class="form-control" placeholder="Поиск по блогу..." required>
+        <button class="btn btn-outline-secondary" type="submit">Искать</button>
+    </div>
+</form>

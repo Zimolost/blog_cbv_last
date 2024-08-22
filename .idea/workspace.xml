@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c3c73b7-2204-4cdc-9599-95653f4a8cef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/blog_cbv.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/accounts/middleware.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/accounts/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/accounts/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog/feeds.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog/sitemaps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog_api/permissions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog_api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/blog_api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/services/mixins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/services/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/avatars/default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/profile_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/profile_edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/user_login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/accounts/user_register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/comments/comments_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/post_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/post_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/post_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/post_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/errors/error_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/messages.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/search_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/js/backend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/js/comments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/js/ratings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/post_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/sidebar.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dockerfile" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2k6rviMxWLcUgoe0ADLZK0KmNlC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/zimolsot/PycharmProjects/blog_cbv/media/images/avatars&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media/images/avatars" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/includes" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/apps" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c3c73b7-2204-4cdc-9599-95653f4a8cef" name="Changes" comment="" />
+      <created>1722615099297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722615099297</updated>
+    </task>
+    <servers />
+  </component>
+</project>
