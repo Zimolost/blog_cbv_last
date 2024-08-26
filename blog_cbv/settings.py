@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from datetime import timedelta
 from pathlib import Path
 
@@ -31,9 +31,15 @@ ALLOWED_HOSTS = ['172.17.0.2', 'localhost', '127.0.0.1', '[::1]', '[0.0.0.0]']
 
 
 # Application definition
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
+import socket
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+
+# INTERNAL_IPS = [
+#     '127.0.0.1',
+#     '0.0.0.0'
+# ]
+INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1"]
 
 SITE_ID = 1
 
@@ -116,13 +122,24 @@ WSGI_APPLICATION = 'blog_cbv.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog_cbv',
-        'USER': 'blog',
-        'PASSWORD': 'xxxxxx',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'blog_cbv',
+#         'USER': 'blog',
+#         'PASSWORD': 'xxxxxx',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 
 
 # Password validation
@@ -159,7 +176,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = (BASE_DIR / 'static')
+STATIC_ROOT = (BASE_DIR / 'staticfiles')
 STATICFILES_DIRS = [BASE_DIR / 'templates/js/']
 
 MEDIA_ROOT = (BASE_DIR / 'media')
@@ -173,18 +190,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 RECAPTCHA_PUBLIC_KEY = '6Ld5myYqAAAAAIBhrnAvAJNUKiN8kBej7C7GDVOe'
 RECAPTCHA_PRIVATE_KEY = '6Ld5myYqAAAAAErMSajHBXH2BlyfMeXoLd06k5V-'
 
-# CACHES = {
-#     'default': {
-#         'BACKEND': 'django_redis.cache.RedisCache',
-#         'LOCATION': 'redis://127.0.0.1:6379/1',  # Redis работает на localhost:6379 и использует 1 базу данных
-#         'OPTIONS': {
-#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-#             'SOCKET_CONNECT_TIMEOUT': 5,  # Время ожидания подключения (в секундах)
-#             'SOCKET_TIMEOUT': 5,          # Время ожидания операций чтения/записи (в секундах)
-#         },
-#         'KEY_PREFIX': 'example'
-#     }
-# }
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://redis:6379/1',  # Redis работает на localhost:6379 и использует 1 базу данных
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            'SOCKET_CONNECT_TIMEOUT': 5,  # Время ожидания подключения (в секундах)
+            'SOCKET_TIMEOUT': 5,          # Время ожидания операций чтения/записи (в секундах)
+        },
+        'KEY_PREFIX': 'example'
+    }
+}
+
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [

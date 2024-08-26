@@ -23,9 +23,9 @@ class PostListView(ListView):
     paginate_by = 3
     queryset = Post.custom.all()
 
-    # @method_decorator(cache_page(60 * 3))  # Кэширование на 3 минут
-    # def dispatch(self, *args, **kwargs):
-    #     return super().dispatch(*args, **kwargs)
+    @method_decorator(cache_page(60 * 3))  # Кэширование на 3 минут
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
 
     def get_context_data(self, **kwargs):
@@ -39,9 +39,9 @@ class PostDetailView(DetailView):
     template_name = 'blog/post_detail.html'
     context_object_name = 'post'
 
-    # @method_decorator(cache_page(60 * 3))  # Кэширование на 3 минут
-    # def dispatch(self, *args, **kwargs):
-    #     return super().dispatch(*args, **kwargs)
+    @method_decorator(cache_page(60 * 3))  # Кэширование на 3 минут
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
